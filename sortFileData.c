@@ -6,6 +6,7 @@
 #include<stdlib.h>
 #define buf_size 1024
 
+
 // this finction sorts the data in the file the data is the random number
 // in the binary formate and the output is the sorted in the increasing order
 //int fstat(int fd, struct stat *st)
@@ -56,8 +57,8 @@ int main(int argc , char* argv[]){
 	struct arr *arry = NULL;
 	int run = 0;
 	int capacity = 0;
-	ssize_t = tmp_total = 0
-	while((readnum = read(inputFd , num ,buf_size)) > 0){
+	ssize_t tmp_total = 0;
+	while ((readnum = read(inputFd , num ,buf_size)) > 0){
 		run++;
 		qsort(num , readnum/sizeof(int) ,sizeof(int),compar);
 		struct arr *newarr = realloc(arry , run * sizeof(struct arr));
@@ -69,7 +70,7 @@ int main(int argc , char* argv[]){
 		if(wrt == -1){
 			printf("error in writing to file");
 		}
-		tem_total += wrt;
+		tmp_total += wrt;
 	}
 	// i got the tempfile with sorted the run;
 	return 0;
